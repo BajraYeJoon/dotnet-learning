@@ -12,13 +12,13 @@ namespace SimpleCalculator
             // Welcome message
             Console.WriteLine("===== Simple C# Calculator =====");
             Console.WriteLine("Learn C# fundamentals through a practical example");
-            
+
             // Boolean variable to control the main program loop
             bool continueCalculating = true;
-            
+
             // List to store calculation history
-            List<string> calculationHistory = new List<string>();
-            
+            List<string> calculationHistory = new();
+
             // Main program loop - keeps running until user chooses to exit
             while (continueCalculating)
             {
@@ -28,7 +28,7 @@ namespace SimpleCalculator
                     Console.WriteLine("\nEnter the first number:");
                     // Convert string input to double (decimal number)
                     double firstNumber = Convert.ToDouble(Console.ReadLine());
-                    
+
                     // Step 2: Get the operation from user
                     Console.WriteLine("\nChoose an operation:");
                     Console.WriteLine("1. Addition (+)");
@@ -37,18 +37,18 @@ namespace SimpleCalculator
                     Console.WriteLine("4. Division (/)");
                     Console.WriteLine("5. Modulus (%)");
                     Console.WriteLine("6. Power (^)");
-                    
+
                     // Read the operation choice
                     int operationChoice = Convert.ToInt32(Console.ReadLine());
-                    
+
                     // Step 3: Get the second number from user
                     Console.WriteLine("\nEnter the second number:");
                     double secondNumber = Convert.ToDouble(Console.ReadLine());
-                    
+
                     // Step 4: Perform the calculation based on the chosen operation
                     double result = 0;
                     string operationSymbol = "";
-                    
+
                     // Using switch statement to handle different operations
                     switch (operationChoice)
                     {
@@ -88,18 +88,18 @@ namespace SimpleCalculator
                         default:
                             throw new ArgumentException("Invalid operation choice!");
                     }
-                    
+
                     // Step 5: Display the result
                     string calculationString = $"{firstNumber} {operationSymbol} {secondNumber} = {result}";
                     Console.WriteLine($"\nResult: {calculationString}");
-                    
+
                     // Add the calculation to history
                     calculationHistory.Add(calculationString);
-                    
+
                     // Step 6: Ask if the user wants to see calculation history
                     Console.WriteLine("\nDo you want to see calculation history? (y/n)");
                     string? historyChoice = Console.ReadLine()?.ToLower();
-                    
+
                     // Using if-else to handle user's choice
                     if (historyChoice == "y" || historyChoice == "yes")
                     {
@@ -124,60 +124,60 @@ namespace SimpleCalculator
                     // Generic exception handler for any other unexpected errors
                     Console.WriteLine($"\nAn unexpected error occurred: {ex.Message}");
                 }
-                
+
                 // Step 7: Ask if the user wants to continue
                 Console.WriteLine("\nDo you want to perform another calculation? (y/n)");
                 string? continueChoice = Console.ReadLine()?.ToLower();
-                
+
                 // Update the loop control variable based on user's choice
                 continueCalculating = (continueChoice == "y" || continueChoice == "yes");
             }
-            
+
             Console.WriteLine("\nThank you for using the Simple C# Calculator!");
         }
-        
+
         // Method for addition operation
         // Static methods belong to the class rather than an instance of the class
         static double Add(double a, double b)
         {
             return a + b;
         }
-        
+
         // Method for subtraction operation
         static double Subtract(double a, double b)
         {
             return a - b;
         }
-        
+
         // Method for multiplication operation
         static double Multiply(double a, double b)
         {
             return a * b;
         }
-        
+
         // Method for division operation
         static double Divide(double a, double b)
         {
             return a / b;
         }
-        
+
         // Method for modulus operation
         static double Modulus(double a, double b)
         {
             return a % b;
         }
-        
+
         // Method for power operation
         static double Power(double baseNumber, double exponent)
         {
             return Math.Pow(baseNumber, exponent);
         }
-        
+
         // Method to display calculation history
         static void DisplayCalculationHistory(List<string> history)
         {
             Console.WriteLine("\n===== Calculation History =====");
-            
+
             // Using if-else to check if history is empty
             if (history.Count == 0)
             {
@@ -191,8 +191,8 @@ namespace SimpleCalculator
                     Console.WriteLine($"{i + 1}. {history[i]}");
                 }
             }
-            
+
             Console.WriteLine("=============================");
         }
     }
-} 
+}

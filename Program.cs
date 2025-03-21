@@ -4,11 +4,13 @@ using System.Collections.Generic;
 
 // Import your calculator example
 using SimpleCalculator;
+using InventoryManagment;
 
 namespace CSharpLearning {
     static class Program {
 
-    static readonly List<ExampleProgram> examples = new List<ExampleProgram> {
+        static readonly List<ExampleProgram> examples = new()
+    {
         new ExampleProgram {
             Id = "1",
             Name = "Simple Calculator",
@@ -22,6 +24,13 @@ namespace CSharpLearning {
             Description = "Todo",
             IsEnabled = false,
             RunAction = () => TodoApp.Program.RunTodoApp()
+        },
+        new ExampleProgram{
+            Id = "3",
+            Name = "Inventory Management",
+            Description = "Inventory Management",
+            IsEnabled = true,
+            RunAction = () => InventoryManagment.Program.RunInventoryManagment()
         }
     };
     
