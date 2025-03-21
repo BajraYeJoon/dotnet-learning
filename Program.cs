@@ -31,6 +31,13 @@ namespace CSharpLearning {
             Description = "Inventory Management",
             IsEnabled = true,
             RunAction = () => InventoryManagment.Program.RunInventoryManagment()
+        },
+        new ExampleProgram {
+            Id = "4",
+            Name = "Classes and Objects",
+            Description = "Learn about classes, objects, constructors, properties, and memory management",
+            IsEnabled = true,
+            RunAction = () => CSharpLearning.Examples.ClassesAndObjects.ClassesDemo.RunDemo()
         }
     };
     
