@@ -8,6 +8,7 @@ using InventoryManagment;
 using CSharpLearning.Examples.ClassesAndObjects;
 using CSharpLearning.Examples.Inheritance;
 using CSharpLearning.Examples.Polymorphism;
+using CSharpLearning.Examples.Encapsulation;
 
 namespace CSharpLearning {
     static class Program {
@@ -55,6 +56,13 @@ namespace CSharpLearning {
             Description = "Learn about different types of polymorphism with a ride-sharing application example",
             IsEnabled = true,
             RunAction = () => PolymorphismDemo.RunDemo()
+        },
+        new ExampleProgram {
+            Id = "7",
+            Name = "Encapsulation",
+            Description = "Learn about encapsulation with a Health Records System example",
+            IsEnabled = true,
+            RunAction = () => EncapsulationDemo.RunDemo()
         }
     };
     
