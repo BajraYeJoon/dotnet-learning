@@ -5,6 +5,9 @@ using System.Collections.Generic;
 // Import your calculator example
 using SimpleCalculator;
 using InventoryManagment;
+using CSharpLearning.Examples.ClassesAndObjects;
+using CSharpLearning.Examples.Inheritance;
+using CSharpLearning.Examples.Polymorphism;
 
 namespace CSharpLearning {
     static class Program {
@@ -37,7 +40,21 @@ namespace CSharpLearning {
             Name = "Classes and Objects",
             Description = "Learn about classes, objects, constructors, properties, and memory management",
             IsEnabled = true,
-            RunAction = () => CSharpLearning.Examples.ClassesAndObjects.ClassesDemo.RunDemo()
+            RunAction = () => ClassesDemo.RunDemo()
+        },
+        new ExampleProgram {
+            Id = "5",
+            Name = "Inheritance",
+            Description = "Learn about inheritance, polymorphism, abstract classes, and interfaces",
+            IsEnabled = true,
+            RunAction = () => InheritanceDemo.RunDemo()
+        },
+        new ExampleProgram {
+            Id = "6",
+            Name = "Polymorphism",
+            Description = "Learn about different types of polymorphism with a ride-sharing application example",
+            IsEnabled = true,
+            RunAction = () => PolymorphismDemo.RunDemo()
         }
     };
     

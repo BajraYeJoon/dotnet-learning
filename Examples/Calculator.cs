@@ -95,7 +95,6 @@ namespace SimpleCalculator
 
                     // Add the calculation to history
                     calculationHistory.Add(calculationString);
-
                     // Step 6: Ask if the user wants to see calculation history
                     Console.WriteLine("\nDo you want to see calculation history? (y/n)");
                     string? historyChoice = Console.ReadLine()?.ToLower();
