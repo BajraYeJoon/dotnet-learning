@@ -34,9 +34,9 @@ namespace CSharpLearning.Examples.Encapsulation
             Console.WriteLine("-------------");
 
             // Create staff members with different access levels
-            Doctor doctor = new Doctor("D5001", "Dr. Sarah Johnson", "Cardiology");
-            Nurse nurse = new Nurse("N3001", "Michael Chen", "General Care");
-            Administrator admin = new Administrator("A2001", "Lisa Brown", "Records");
+            Doctor doctor = new("D5001", "Dr. Sarah Johnson", "Cardiology");
+            Nurse nurse = new("N3001", "Michael Chen", "General Care");
+            Administrator admin = new("A2001", "Lisa Brown", "Records");
 
             Console.WriteLine("\nStaff Access Demonstration:");
 
@@ -48,11 +48,11 @@ namespace CSharpLearning.Examples.Encapsulation
                 "Chest pain and shortness of breath",
                 "Prescribed nitroglycerin and scheduled stress test",
                 doctor.StaffId,
-                new List<string> { "Hypertension", "High cholesterol" },
-                new List<Medication> {
+                ["Hypertension", "High cholesterol"],
+                [
                     new Medication("Lisinopril", "10mg", "Once daily"),
                     new Medication("Atorvastatin", "20mg", "Once daily at bedtime")
-                }
+                ]
             );
 
             hospitalSystem.AddMedicalRecord(record1);

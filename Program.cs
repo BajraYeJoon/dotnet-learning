@@ -9,6 +9,7 @@ using CSharpLearning.Examples.ClassesAndObjects;
 using CSharpLearning.Examples.Inheritance;
 using CSharpLearning.Examples.Polymorphism;
 using CSharpLearning.Examples.Encapsulation;
+using CSharpLearning.Examples.Interfaces;
 
 namespace CSharpLearning {
     static class Program {
@@ -63,6 +64,13 @@ namespace CSharpLearning {
             Description = "Learn about encapsulation with a Health Records System example",
             IsEnabled = true,
             RunAction = () => EncapsulationDemo.RunDemo()
+        },
+        new ExampleProgram {
+            Id = "8",
+            Name = "Interfaces",
+            Description = "Learn about interfaces with a Microsoft Teams-like messaging system",
+            IsEnabled = true,
+            RunAction = () => InterfacesDemo.RunDemo()
         }
     };
     
