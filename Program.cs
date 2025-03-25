@@ -10,6 +10,7 @@ using CSharpLearning.Examples.Inheritance;
 using CSharpLearning.Examples.Polymorphism;
 using CSharpLearning.Examples.Encapsulation;
 using CSharpLearning.Examples.Interfaces;
+using CSharpLearning.Examples.CommonPitfalls;
 
 namespace CSharpLearning {
     static class Program {
@@ -71,6 +72,13 @@ namespace CSharpLearning {
             Description = "Learn about interfaces with a Microsoft Teams-like messaging system",
             IsEnabled = true,
             RunAction = () => InterfacesDemo.RunDemo()
+        },
+        new ExampleProgram {
+            Id = "9",
+            Name = "Common Pitfalls",
+            Description = "Learn about common pitfalls and how to avoid them in C#",
+            IsEnabled = true,
+            RunAction = () => CommonPitfallsDemo.RunDemo()
         }
     };
     
