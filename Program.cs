@@ -11,6 +11,7 @@ using CSharpLearning.Examples.Polymorphism;
 using CSharpLearning.Examples.Encapsulation;
 using CSharpLearning.Examples.Interfaces;
 using CSharpLearning.Examples.CommonPitfalls;
+using CSharpLearning.NetflixStyle;
 
 namespace CSharpLearning {
     static class Program {
@@ -79,6 +80,13 @@ namespace CSharpLearning {
             Description = "Learn about common pitfalls and how to avoid them in C#",
             IsEnabled = true,
             RunAction = () => CommonPitfallsDemo.RunDemo()
+        },
+        new ExampleProgram {
+            Id = "10",
+            Name = "Netflix-Style Content Manager",
+            Description = "A Netflix-inspired content management system demonstrating OOP concepts",
+            IsEnabled = true,
+            RunAction = () => NetflixDemo.RunDemo()
         }
     };
     
